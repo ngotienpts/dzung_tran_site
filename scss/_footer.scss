@@ -4,7 +4,7 @@
   bottom: 2rem;
   width: 2.5rem;
   height: 2.5rem;
-  background: #a51515;
+  background: #b2006a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +17,5 @@
   -ms-transition: all 0.6s;
   -o-transition: all 0.6s;
   user-select: none;
+  z-index: 1000;
 }

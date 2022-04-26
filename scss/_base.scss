@@ -1,4 +1,8 @@
 @import url("../font/HelveticaNeue.otf");
+@font-face {
+  font-family: 'Helvetical Medium';
+  src: url('../font/helvetica-neue-medium.ttf');
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -44,7 +48,12 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #cc0000;
+  color: #deb887;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
 }
 img {
   display: block;
@@ -72,17 +81,24 @@ img {
 .font-robo {
   font-family: 'Roboto', sans-serif;
 }
+.font-hel500 {
+  font-family: "Helvetical Medium", sans-serif;
+}
 /*===========================================================================*/
 .w-1040 {
   max-width: 65rem;
+  margin: 0 auto;
+}
+.w-1080 {
+  max-width: 67.5rem;
   margin: 0 auto;
 }
 .w-1140 {
   max-width: 71.25rem;
   margin: 0 auto;
 }
-.w-1080 {
-  max-width: 67.5rem;
+.w-1280 {
+  max-width: 80rem;
   margin: 0 auto;
 }
 .w-1440 {
@@ -169,6 +185,42 @@ img {
   color: #fff;
   outline: none;
 }
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 1em 1.5em;
+  outline: none;
+  border: none;
+  background-color: #b2006a;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #0870d1;
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+}
+
+button:hover::before {
+  transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+}
+
 /*=================================================================*/
 .thumb-img {
   position: relative;
@@ -196,14 +248,14 @@ img {
   object-fit: cover;
 }
 /*=================================================================*/
-.text-blue-28 {
-  color: #284fa7;
-}
-.text-blue-03 {
-  color: #03a9f4;
+.text-blue-08 {
+  color: #0870D1;
 }
 .text-00 {
   color: #000;
+}
+.text-black-1f {
+  color: #1F2124;
 }
 .text-gray-33 {
   color: #333;
@@ -214,37 +266,38 @@ img {
 .text-gray-66 {
   color: #666;
 }
+.text-gray-77 {
+  color: #777;
+}
 .text-gray-82 {
   color: #828282;
 }
-.text-gray-c0 {
-  color: #c0c0c0;
+.text-gray-bd {
+  color: #BDBDBD;
 }
-.text-gray-e0 {
-  color: #e0e0e0;
+.text-gray-d2 {
+  color: #D2D2D2;
 }
-.text-gray-fc {
-  color: #FCFAF6;
-}
-.text-red-c43 {
-  color: #c43000;
-}
+
 .text-white {
   color: #fff;
 }
 
 /*=================================================================*/
-.bg-blue-28 {
-  background-color: #284fa7;
+.bg-pink-b2 {
+  background-color: #B2006A;
 }
-.bg-blue-15 {
-  background-color: #152764;
+.bg-gray-6e {
+  background-color: #6E6F72;
 }
-.bg-blue-03 {
-  background-color: #03A9F4;
+.bg-green-bc {
+  background-color: #BCDEDC;
 }
-.bg-fffe {
-  background-color: #fffef5;
+.bg-blue-086 {
+  background-color: #0868AC;
+}
+.bg-blue-087 {
+  background-color: #0870D1;
 }
 .bg-white {
   background: #fff;
@@ -540,37 +593,36 @@ img {
   box-shadow: 0 4px 16px rgb(163 161 161 / 50%);
 }
 /*=================================================================*/
-.line-15 {
+.lh-15 {
   line-height: 0.9375rem;
 }
-.line-19 {
+.lh-19 {
   line-height: 1.1875rem;
 }
-.line-22 {
+.lh-22 {
   line-height: 1.375rem;
 }
-.line-24 {
+.lh-24 {
   line-height: 1.5rem;
 }
-.line-26 {
+.lh-26 {
   line-height: 1.625rem;
 }
-.line-28 {
+.lh-28 {
   line-height: 1.75rem;
 }
-.line-32 {
+.lh-32 {
   line-height: 2rem;
 }
-.line-34 {
+.lh-34 {
   line-height: 2.125rem;
 }
-.line-46 {
+.lh-42 {
+  line-height: 2.625rem;
+}
+.lh-46 {
   line-height: 2.875rem;
 }
-/*=================================================================*/
-.line-e5 {
-  border-top: 1px solid #e5e5e5;
-} 
 /*=================================================================*/
 .align-items-center {
   align-items: center;
@@ -604,6 +656,12 @@ img {
 .d-lg-flex {
   display: flex;
 }
+.flex-1 {
+  flex: 1;
+}
+.flex-0 {
+  flex-shrink: 0;
+}
 /*=================================================================*/
 .position-relative {
   position: relative;
@@ -618,4 +676,11 @@ img {
 /*=================================================================*/
 .text-uppercase {
   text-transform: uppercase;
+}
+/*=================================================================*/
+.let-2 {
+  letter-spacing: 2px;
+}
+.let-3 {
+  letter-spacing: 3px;
 }

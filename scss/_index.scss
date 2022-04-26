@@ -1,0 +1,114 @@
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo__img {
+  height: 5rem;
+  width: auto;
+}
+.header-navbar,
+.header-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-navbar__item + .header-navbar__item {
+  margin-left: 2.5rem;
+}
+.header-navbar {
+  margin-top: 1.25rem;
+}
+
+.header-social__item + .header-social__item {
+  margin-left: 1rem;
+}
+.header-social__extend {
+  font-size: 1.25rem;
+}
+.header-social__extend {
+  margin-right: 0.25rem;
+}
+.main-top__primary {
+  position: relative;
+}
+.main-top__contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.main-top__overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.main-top__sapo {
+  margin-bottom: 3.75rem;
+}
+.tranlucent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+.main-top__secondary {
+  position: relative;
+  // overflow: hidden;
+}
+.main-top__text {
+  padding: 60px 0 115px 0;
+}
+.main-top__des {
+  flex: 1;
+}
+.main-top__logo {
+  flex-shrink: 0;
+  margin-top: -102px;
+  z-index: 3;
+}
+.main-top__img {
+  width: 380px;
+  height: auto;
+}
+.main-top__wave1,
+.main-top__wave2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.event-news {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 3.75rem 0;
+    margin-bottom: 3.75rem;
+}
+.main-top__heading {
+    margin-bottom: 1.875rem;
+}
+.event-news__container {
+    display: grid;
+    grid-template-columns: 1fr 320px 320px;
+    grid-gap: 1.25rem;
+}
+.event-news__small {
+    padding-left: 1.25rem;
+    border-left: 1px solid #D2D2D2;
+}
+.leader__sapo {
+    margin-top: 1.875rem;
+    margin-bottom: 1.5rem;
+}
