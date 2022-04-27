@@ -232,28 +232,13 @@ img {
 }
 
 /*===========================================================================*/
-.w-1040 {
-  max-width: 65rem;
-  margin: 0 auto;
-}
-
-.w-1080 {
-  max-width: 67.5rem;
-  margin: 0 auto;
-}
-
-.w-1140 {
-  max-width: 71.25rem;
+.w-930 {
+  max-width: 58.125rem;
   margin: 0 auto;
 }
 
 .w-1280 {
   max-width: 80rem;
-  margin: 0 auto;
-}
-
-.w-1440 {
-  max-width: 90rem;
   margin: 0 auto;
 }
 
@@ -916,6 +901,10 @@ button:hover::before {
   justify-content: center;
 }
 
+.justify-content-around {
+  justify-content: space-around;
+}
+
 /*=================================================================*/
 .text-center {
   text-align: center;
@@ -1111,12 +1100,187 @@ button:hover::before {
 
 .event-news__small {
   padding-left: 1.25rem;
-  border-left: 1px solid #D2D2D2;
+  border-left: 1px solid #d2d2d2;
+}
+
+.block-leader {
+  position: relative;
+  padding: 3.75rem 0 4.5rem 0;
 }
 
 .leader__sapo {
   margin-top: 1.875rem;
   margin-bottom: 1.5rem;
+}
+
+.leader-item {
+  display: inline-block;
+}
+
+.hexagon {
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  height: 189px;
+  overflow: hidden;
+  visibility: hidden;
+  width: 167px;
+  display: inline-block;
+}
+
+.hex1 {
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hex2 {
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  height: 100%;
+  position: relative;
+  visibility: visible;
+  width: 100%;
+  background: #c3e5e3;
+  overflow: hidden;
+}
+
+.header-hexagon__avatar {
+  position: absolute;
+  bottom: -5px;
+}
+
+.header-hexagon__bg {
+  opacity: 0.5;
+  position: absolute;
+  bottom: -16px;
+  left: -40px;
+}
+
+.leader-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.block-contact {
+  padding: 3.75rem 0 4.5rem 0;
+  position: relative;
+}
+
+.contact-field {
+  z-index: 10;
+  position: relative;
+}
+
+.contact-overlay {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.contact-container {
+  position: relative;
+}
+
+.contact-info {
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: rgba(8, 112, 209, 0.8);
+  width: 457px;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+}
+
+.block-field-of-activity {
+  background-image: url("../images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3.75rem 0 0.65rem;
+}
+
+.field-of-activity__container {
+  position: relative;
+}
+
+.field-of-activity__container .swiper {
+  width: 100%;
+  padding-top: 2.5rem;
+  padding-bottom: 50px;
+}
+
+.field-of-activity__container .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+
+.field-of-activity__container .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.field-of-activity__container .thumb-5x3 {
+  padding-bottom: 150%;
+}
+
+.field-of-activity__container {
+  width: calc(100% - (100% - 1280px) / 2);
+  margin-left: auto;
+}
+
+.field-of-activity__container .swiper-horizontal > .swiper-pagination-progressbar,
+.field-of-activity__container .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  max-width: 1280px;
+  height: 0.125rem;
+  top: auto;
+}
+
+.field-of-activity__container .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #E8E8DF;
+}
+
+.field-of-activity__container .swiper-pagination-progressbar {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(0deg, black, transparent);
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.swiper-slide__text {
+  margin-top: -2rem;
+  position: relative;
+  z-index: 10;
+  padding: 0 28px;
+}
+
+.swiper-work {
+  margin-top: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 1280px;
 }
 
 #back-top {

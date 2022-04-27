@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // width document
   var widthDoc = document.querySelector("body");
 
+  // slider filed of activity
+  var fieldActivity = document.querySelector('.field-of-activity');
+
   const app = {
     // su ly cac su kien
     handleEvent: function () {
@@ -17,6 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
           document.documentElement.scrollTop = 0;
         };
       }
+
+
+      // slider filed of activity
+      if(fieldActivity){
+        var swipperSlide1 = fieldActivity.querySelectorAll('.swiper-slide');
+        var swipperCount = fieldActivity.querySelector('.swiper-work__count');
+        swipperSlide1.forEach(function(count){
+          console.log(count.matches('.swiper-slide-active'))
+        })
+      }
+      
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -35,6 +49,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     },
+    // slider linh vuc hoat dong
+    sliderFiledActivity: function(){
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 5,
+        centeredSlides: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "progressbar",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 5,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+        },
+      });
+    },
     // window scroll
     windowScroll: function () {
       var _this = this;
@@ -49,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.handleEvent();
       // window scroll
       this.windowScroll();
+      // slider linh vuc hoat dong
+      this.sliderFiledActivity();
     },
   };
 
