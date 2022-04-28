@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../font/HelveticaNeue.otf");
 html,
 body,
@@ -783,11 +784,20 @@ button:hover::before {
 }
 
 /*=================================================================*/
-.form-control-t {
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+.form-control {
   width: 100%;
-  border: none;
-  height: 2.125rem;
-  padding: 1rem;
+  height: 3.375rem;
+  padding: 0.9375rem;
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 /*=================================================================*/
@@ -1015,11 +1025,90 @@ button:hover::before {
   margin-right: 0.25rem;
 }
 
+.header-extend-icon {
+  cursor: pointer;
+}
+
+.sub-menu-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #0870d1;
+  z-index: 1000;
+  min-width: 300px;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.sub-menu-wrapper.open {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+
+.sub-menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb,
+.custom-scroll-x::-webkit-scrollbar-thumb {
+  background-color: rgba(90, 90, 90, 0);
+  border-radius: 0.375rem;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.01);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 0.375rem;
+}
+
+.text-white.dropdown-item__link {
+  display: block;
+  padding: 1rem 1rem 1rem 2rem;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+.text-white.dropdown-item__link:hover {
+  background: #0865bc;
+  color: #fff;
+}
+
+.header-mb__extend {
+  display: none;
+}
+
 .main-top__primary {
   position: relative;
 }
 
 .main-top__contact {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1028,7 +1117,7 @@ button:hover::before {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 4;
 }
 
 .main-top__overlay {
@@ -1117,6 +1206,10 @@ button:hover::before {
   display: inline-block;
 }
 
+.leader-container {
+  flex-wrap: wrap;
+}
+
 .hexagon {
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
@@ -1183,6 +1276,8 @@ button:hover::before {
 .contact-overlay {
   position: absolute;
   bottom: 100px;
+  left: 0;
+  right: 0;
   width: 100%;
   height: auto;
   user-select: none;
@@ -1209,6 +1304,11 @@ button:hover::before {
   background-position: center;
   background-size: cover;
   padding: 3.75rem 0 0.65rem;
+  position: relative;
+}
+
+.field-of-activity {
+  position: relative;
 }
 
 .field-of-activity__container {
@@ -1283,6 +1383,130 @@ button:hover::before {
   max-width: 1280px;
 }
 
+.block-notifi-company {
+  background: #F4F6F8;
+  padding-top: 3.75rem;
+  padding-bottom: 77px;
+}
+
+.notifi-compani {
+  display: flex;
+}
+
+.notifi {
+  width: 40%;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(107, 119, 154, 0.2);
+  padding-right: 52px;
+}
+
+.company {
+  width: 60%;
+  flex: 1;
+  padding-left: 90px;
+}
+
+.form-gender,
+.form-info {
+  padding: 7px 0;
+}
+
+.swiper-img {
+  max-width: 10rem;
+  height: auto;
+  margin-bottom: 3.75rem;
+}
+
+.swiper-img:last-child {
+  margin-bottom: 5rem;
+}
+
+.company-container .swiper-button-next,
+.company-container .swiper-rtl .swiper-button-prev {
+  right: 0;
+  left: auto;
+  top: auto;
+  bottom: 0;
+}
+
+.company-container .swiper-button-prev,
+.company-container .swiper-rtl .swiper-button-next {
+  left: auto;
+  right: 3rem;
+  bottom: 0;
+  top: auto;
+}
+
+.company-container .swiper-button-next,
+.company-container .swiper-rtl .swiper-button-prev,
+.company-container .swiper-button-prev,
+.company-container .swiper-rtl .swiper-button-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #fff;
+  border: 1px solid #0870d1;
+  border-radius: 0.25rem;
+}
+
+.company-container .swiper-button-prev:after,
+.company-container .swiper-rtl .swiper-button-next:after {
+  content: "❮";
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.company-container .swiper-button-next:after,
+.company-container .swiper-rtl .swiper-button-prev:after {
+  content: "❯";
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.company-container .swiper-button-next.swiper-button-disabled,
+.company-container .swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+  background: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.company-container .swiper-button-next,
+.company-container .swiper-button-prev {
+  background: #0870D1;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.company-container .swiper-button-next.swiper-button-disabled:after,
+.company-container .swiper-button-prev.swiper-button-disabled:after {
+  color: #0870D1;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.main-top__bg--mb {
+  display: none;
+}
+
 #back-top {
   position: fixed;
   right: 1rem;
@@ -1303,6 +1527,31 @@ button:hover::before {
   -o-transition: all 0.6s;
   user-select: none;
   z-index: 1000;
+}
+
+.footer-pc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125rem 0;
+}
+
+.footer-pc__img {
+  height: 70px;
+  width: auto;
+}
+
+.footer-pc__content {
+  display: flex;
+  align-items: center;
+}
+
+.footer-pc__item + .footer-pc__item {
+  margin-left: 2.5rem;
+}
+
+.footer-pc__link + .footer-pc__link {
+  margin-left: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

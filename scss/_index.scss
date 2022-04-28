@@ -1,43 +1,8 @@
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header-logo__img {
-  height: 5rem;
-  width: auto;
-}
-.header-navbar,
-.header-social {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.header-navbar__item + .header-navbar__item {
-  margin-left: 2.5rem;
-}
-.header-navbar {
-  margin-top: 1.25rem;
-}
-
-.header-social__item + .header-social__item {
-  margin-left: 1rem;
-}
-.header-social__extend {
-  font-size: 1.25rem;
-}
-.header-social__extend {
-  margin-right: 0.25rem;
-}
 .main-top__primary {
   position: relative;
 }
 .main-top__contact {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,7 +11,7 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 4 ;
 }
 .main-top__overlay {
   position: absolute;
@@ -119,7 +84,9 @@
 .leader-item {
   display: inline-block;
 }
-
+.leader-container {
+  flex-wrap: wrap;
+}
 .hexagon {
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
@@ -179,6 +146,8 @@
 .contact-overlay {
   position: absolute;
   bottom: 100px;
+  left: 0;
+  right: 0;
   width: 100%;
   height: auto;
   user-select: none;
@@ -202,8 +171,11 @@
   background-position: center;
   background-size: cover;
   padding: 3.75rem 0 0.65rem;
+  position: relative;
 }
-
+.field-of-activity {
+  position: relative;
+}
 .field-of-activity__container {
   position: relative;
 }
@@ -267,4 +239,112 @@
   justify-content: space-between;
   color: rgba($color: #fff, $alpha: 0.65);
   max-width: 1280px;
+}
+.block-notifi-company {
+  background:#F4F6F8;
+  padding-top: 3.75rem;
+  padding-bottom: 77px;
+}
+.notifi-compani {
+  display: flex;
+}
+.notifi {
+  width: 40%;
+  flex-shrink: 0;
+  border-right: 1px solid rgba($color: #6B779A, $alpha: 0.2);
+  padding-right: 52px;
+}
+.company {
+  width: 60%;
+  flex: 1;
+  padding-left: 90px;
+}
+.form-gender,
+.form-info {
+  padding: 7px 0;
+}
+.swiper-img {
+  max-width: 10rem;
+  height: auto;
+  margin-bottom: 3.75rem;
+}
+.swiper-img:last-child {
+  margin-bottom: 5rem;
+}
+.company-container .swiper-button-next, 
+.company-container .swiper-rtl .swiper-button-prev {
+  right: 0;
+  left: auto;
+  top: auto;
+  bottom: 0;
+}
+.company-container .swiper-button-prev, 
+.company-container .swiper-rtl .swiper-button-next {
+  left: auto;
+  right: 3rem;
+  bottom: 0;
+  top: auto;
+}
+.company-container .swiper-button-next, 
+.company-container .swiper-rtl .swiper-button-prev,
+.company-container .swiper-button-prev, 
+.company-container .swiper-rtl .swiper-button-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #fff;
+  border: 1px solid #0870d1;
+  border-radius: 0.25rem;
+}
+.company-container .swiper-button-prev:after, 
+.company-container .swiper-rtl .swiper-button-next:after {
+  content: '\276E';
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.company-container .swiper-button-next:after, 
+.company-container .swiper-rtl .swiper-button-prev:after {
+  content: '\276F';
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.company-container .swiper-button-next.swiper-button-disabled, 
+.company-container .swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+  background: #fff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.company-container .swiper-button-next,
+.company-container .swiper-button-prev {
+  background: #0870D1;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.company-container .swiper-button-next.swiper-button-disabled:after, 
+.company-container .swiper-button-prev.swiper-button-disabled:after {
+  color: #0870D1;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.main-top__bg--mb {
+  display: none;
 }

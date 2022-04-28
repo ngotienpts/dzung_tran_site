@@ -5,8 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // width document
   var widthDoc = document.querySelector("body");
 
-  // slider filed of activity
-  var fieldActivity = document.querySelector('.field-of-activity');
+  // header
+  var header = document.querySelector('#header');
+
+  // submenu
+  var subMenu = document.querySelector('.sub-menu-wrapper');
 
   const app = {
     // su ly cac su kien
@@ -21,16 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
         };
       }
 
-
-      // slider filed of activity
-      if(fieldActivity){
-        var swipperSlide1 = fieldActivity.querySelectorAll('.swiper-slide');
-        var swipperCount = fieldActivity.querySelector('.swiper-work__count');
-        swipperSlide1.forEach(function(count){
-          console.log(count.matches('.swiper-slide-active'))
+      // 
+      if(header){
+        var extendsMenu = header.querySelectorAll('.header-extend-icon');
+        extendsMenu.forEach(function(a){
+          if(subMenu){
+            subMenu.style.top = header.clientHeight + 'px';
+            a.onclick = function(){
+              subMenu.classList.toggle('open');
+            }
+          }
         })
       }
-      
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {});
     },
@@ -61,13 +66,29 @@ document.addEventListener("DOMContentLoaded", function () {
           type: "progressbar",
         },
         breakpoints: {
-          768: {
-            slidesPerView: 2.5,
-            spaceBetween: 5,
-          },
           1024: {
             slidesPerView: 4,
             spaceBetween: 5,
+          },
+        },
+      });
+    },
+    // slider cty thanh vien
+    sliderCompany: function(){
+      var swiper2 = new Swiper(".mySwiperCompa", {
+        slidesPerView: 2,
+        spaceBetween: 60,
+        slidesPerGroup: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        hideOnClick:true,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 98,
+            slidesPerGroup: 1,
           },
         },
       });
@@ -88,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
       this.windowScroll();
       // slider linh vuc hoat dong
       this.sliderFiledActivity();
+      // slider cty thanh vien
+      this.sliderCompany();
     },
   };
 

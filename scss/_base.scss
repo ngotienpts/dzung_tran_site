@@ -524,11 +524,19 @@ button:hover::before {
   margin: 1.5rem;
 }
 /*=================================================================*/
-.form-control-t {
+.form-group {
+  margin-bottom: 0.75rem;
+}
+.form-control {
   width: 100%;
-  border: none;
-  height: 2.125rem;
-  padding: 1rem;
+  height: 3.375rem;
+  padding: 0.9375rem;
+  border:1px solid #eee;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 /*=================================================================*/
 .border-999 {

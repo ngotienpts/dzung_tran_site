@@ -17,9 +17,39 @@
   </head>
 
   <body>
+    <!-- sub menu -->
+    <div class="sub-menu-wrapper">
+      <div class="sub-menu custom-scroll">
+        <ul class="dropdown-menu">
+          <!-- item -->
+          <li class="dropdown-item fs-14 text-uppercase">
+            <a href="#" class="text-white dropdown-item__link">giới thiệu</a>
+          </li>
+          <!-- end item -->
+          <!-- item -->
+          <li class="dropdown-item fs-14 text-uppercase">
+            <a href="#" class="text-white dropdown-item__link">giới thiệu</a>
+          </li>
+          <!-- end item -->
+          <!-- item -->
+          <li class="dropdown-item fs-14 text-uppercase">
+            <a href="#" class="text-white dropdown-item__link">giới thiệu</a>
+          </li>
+          <!-- end item -->
+        </ul>
+      </div>
+      <div class="sub-menu-block">
+      </div>
+    </div>
+    <!-- end sub menu -->
     <!-- header -->
     <header id="header" class="bg-blue-087">
       <section class="header w-1280 py-15">
+        <!-- extend mb -->
+        <div class="header-mb__extend">
+          <img src="./images/extend.png" alt="" class="header-extend-icon">
+        </div>
+        <!-- end extend mb -->
         <!-- logo -->
         <div class="header-logo">
           <a href="#" class="header-logo__link">
@@ -33,7 +63,7 @@
           <div class="header-social">
             <!-- item -->
             <div class="header-social__item header-social__extend">
-              <img src="./images/extend.png" alt="">
+              <img src="./images/extend.png" alt="" class="header-extend-icon">
             </div>
             <!-- end item -->
             <!-- item -->
@@ -98,12 +128,15 @@
       <section class="main-top">
         <!-- primary -->
         <div class="main-top__primary">
-          <img src="./images/bg.jpg" alt="" class="main-top__bg">
+          <img src="./images/bg.jpg" alt="" class="main-top__bg main-top__bg--pc">
+          <img src="./images/bg.png" alt="" class="main-top__bg main-top__bg--mb">
           <div class="tranlucent"></div>
           <div class="text-center main-top__contact">
             <div class="fs-36 text-white let-3 lh-42 text-uppercase main-top__sapo">
               <span>chúng tôi chọn</span><br>
-              <span>Người đồng hành xứng tầm</span>
+              <span class="d-lg-block d-none">Người đồng hành xứng tầm</span>
+              <span class="d-lg-none d-block">Người đồng hành</span>
+              <span class="d-lg-none d-block">xứng tầm</span>
             </div>
             <a href="#">
               <button class="text-uppercase main-top__btn">liên hệ<i class="fas fa-arrow-right ml-15"></i></button>
@@ -129,10 +162,12 @@
           </div>
           <!-- wave -->
           <div class="main-top__wave1">
-            <img src="./images/wave1.png" alt="">
+            <img src="./images/wave1.png" alt="" class="d-lg-block d-none w-100">
+            <img src="./images/wave1-mb.png" alt="" class="d-lg-none d-block w-100">
           </div>
           <div class="main-top__wave2">
-            <img src="./images/wave2.png" alt="">
+            <img src="./images/wave2.png" alt="" class="d-lg-block d-none w-100">
+            <img src="./images/wave2-mb.png" alt="" class="d-lg-none d-block w-100">
           </div>
           <!-- end wave -->
         </div>
@@ -236,6 +271,7 @@
 
       <!-- linh vuc hoat dong -->
       <section class="block-field-of-activity">
+        <div class="tranlucent"></div>
         <div class="field-of-activity">
           <!-- title -->
           <h1 class="w-1280 field-of-activity__title fs-36 text-white fw-700 lh-46 let-3 mb-20 text-uppercase">lĩnh vực hoạt động</h1>
@@ -349,7 +385,7 @@
               </div>
               <div class="swiper-work">
                 <h3 class="swiper-work__title fs-18 lh-28 mb-20 text-uppercase">hoạt động</h3>
-                <p class="swiper-work__count fw-700 fs-16">2/2</p>
+                <!-- <p class="swiper-work__count fw-700 fs-16">2/2</p> -->
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -437,7 +473,7 @@
             <!-- container -->
             <div class="leader-container w-930 d-flex align-items-center justify-content-around">
               <!-- item nay ko xoa-->
-              <div class="leader-item">
+              <div class="leader-item d-lg-block d-none">
                 <div class="hexagon"></div>
               </div>
               <!-- end item -->
@@ -474,7 +510,7 @@
               </div>
               <!-- end item -->
               <!-- item nay ko xoa-->
-              <div class="leader-item">
+              <div class="leader-item d-lg-block d-none">
                 <div class="hexagon"></div>
               </div>
               <!-- end item -->
@@ -507,17 +543,159 @@
           </div>
           <!-- end container -->
         </div>
-        <img src="./images/wave3.png" alt="" class="contact-overlay">
+        <img src="./images/wave3.png" alt="" class="contact-overlay d-lg-block d-none">
+        <img src="./images/wave3-mb.png" alt="" class="contact-overlay d-lg-none d-block">
       </section>
       <!-- end lien he -->
+
+      <!-- nhan thong bao va cty thanh vien -->
+      <section class="block-notifi-company">
+        <div class="notifi-compani w-1280">
+          <!-- notifi -->
+          <div class="notifi">
+            <!-- title -->
+            <h3 class="company-pc__title d-lg-block d-none fs-36 text-blue-08 fw-700 lh-46 let-3 text-uppercase">công ty thành viên</h3>
+            <!-- end title -->
+            <!-- sapo -->
+            <p class="notifi-sapo lh-26 text-blue-08 font-hel500 py-12">Nhận thông tin từ Crystal Bay Golf and Resort</p>
+            <!-- end sapo -->
+            <!-- form -->
+            <div class="notifi-form font-secondary">
+              <!-- name -->
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Họ và tên">
+              </div>
+              <!-- end name -->
+              <!-- gender -->
+              <div class="form-group form-gender">
+                <span class="pr-20">Giới tính</span>
+                <span class="pr-12">
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Nam</label>
+                </span>
+                <span>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Nữ</label>
+                </span>
+              </div>
+              <!-- end gender -->
+              <!-- email -->
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Địa chỉ email">
+              </div>
+              <!-- end email -->
+              <!-- phone -->
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Số điện thoại">
+              </div>
+              <!-- end phone -->
+
+              <!-- nhan thong tin -->
+              <div class="form-group form-info">
+                <input type="checkbox" id="info" name="info" class="mr-12" checked>
+                <label for="info">Đồng ý nhận thông tin</label>
+              </div>
+              <!-- end nhan thong tin -->
+              <button class="text-uppercase notifi__btn">Gửi thông tin<i class="fas fa-arrow-right ml-15"></i></button>
+            </div>
+            <!-- end form -->
+          </div>
+          <!-- end notifi -->
+          <!-- company -->
+          <div class="company">
+            <!-- title -->
+            <h3 class="company-mb__title d-lg-none d-block fs-36 text-blue-08 fw-700 lh-46 let-3 text-uppercase">công ty thành viên</h3>
+            <!-- end title -->
+            <!-- container -->
+            <div class="company-container">
+              <div class="swiper mySwiperCompa">
+                <div class="swiper-wrapper">
+                  <!-- item -->
+                  <div class="swiper-slide">
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                    <img src="./images/brand2.png" alt="" class="swiper-img">  
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                  </div>
+                  <!-- end item -->
+                  <!-- item -->
+                  <div class="swiper-slide">
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                    <img src="./images/brand2.png" alt="" class="swiper-img">  
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                  </div>
+                  <!-- end item -->
+                  <!-- item -->
+                  <div class="swiper-slide">
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                    <img src="./images/brand2.png" alt="" class="swiper-img">  
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                  </div>
+                  <!-- end item -->
+                  <!-- item -->
+                  <div class="swiper-slide">
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                    <img src="./images/brand2.png" alt="" class="swiper-img">  
+                    <img src="./images/brand1.png" alt="" class="swiper-img">  
+                  </div>
+                  <!-- end item -->
+                </div>
+                <!-- next prev -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- end next prev -->
+              </div>
+            </div>
+            <!-- end container -->
+          </div>
+          <!-- end company -->
+        </div>
+      </section>
+      <!-- end nhan thong bao va cty thanh vien -->
     </main>
     <!-- end main -->
     <!-- footer -->
-    <footer id="footer" class="bg-blue-28">
+    <footer id="footer" class="bg-gray-6e">
       <!-- back top -->
       <div id="back-top"><i class="fas fa-arrow-up text-white"></i></div>
       <!-- end back top -->
-
+      <!-- pc -->
+      <section class="footer-pc w-1280">
+        <!-- logo -->
+        <div class="footer-pc__logo">
+          <a href="#">
+            <img src="./images/Logo.svg" alt="" class="footer-pc__img">
+          </a>
+        </div>
+        <!-- end logo -->
+        <!-- content -->
+        <div class="footer-pc__content">
+          <div class="footer-pc__item lh-19 text-white fs-12 font-secondary">
+            <p class="">Địa chỉ dự án</p>
+            <p>D. P.805, Tầng 8, Tòa nhà Deaha Business Center, số 360 Kim Mã, Phường Ngọc Khánh, Quận Ba Đình, Hà Nội</p>
+          </div>
+          <div class="footer-pc__item lh-19 text-white fs-12 font-secondary">
+            <p class="">Email:</p>
+            <p>info@crystalbaygolfresort.com.vn</p>
+          </div>
+          <div class="footer-pc__item lh-19 text-white fs-12 font-secondary">
+            <p class="">Hotline:</p>
+            <p>090 123 4567</p>
+          </div>
+          <div class="footer-pc__item d-flex align-items-center">
+            <a href="#" class="footer-pc__link">
+              <img src="./images/Facebook.png" alt="">
+            </a>
+            <a href="#" class="footer-pc__link">
+              <img src="./images/twitter.png" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- end content -->
+      </section>
+      <!-- end pc -->
+      <!-- mb -->
+      <section class="footer-mb"></section>
+      <!-- end mb -->
     </footer>
     <!-- end footer -->
     <script src="./font-awesome/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>
