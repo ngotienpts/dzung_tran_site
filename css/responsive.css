@@ -12,14 +12,19 @@
 .header-navbar,
 .header-social__extend,
 .main-top__bg--pc,
-.event-news__small--des {
+.event-news__small--des,
+.footer-pc,
+.cate-top-catefory {
     display: none;
   }
 
   /*===================================================================*/
   .header-mb__extend,
 .main-top__bg--mb,
-.event-news__container {
+.event-news__container,
+.footer-mb,
+.navbar-mb,
+.articles-primary {
     display: block;
   }
 
@@ -49,7 +54,8 @@
 .field-of-activity__title,
 .leader__title,
 .contact__title,
-.company-mb__title {
+.company-mb__title,
+.cate-top__title {
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -88,11 +94,11 @@
 
   .event-news__small--img {
     flex-shrink: 0;
-    width: 40%;
+    width: 35%;
   }
 
   .event-news__small--content {
-    width: 60%;
+    width: 65%;
     flex: 1;
     padding-left: 0.65rem;
   }
@@ -162,6 +168,94 @@
 
   .company-mb__title {
     padding-bottom: 1.875rem;
+  }
+
+  .sub-menu-wrapper {
+    min-width: 100%;
+  }
+
+  .navbar-mb {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*===================================================================cate===================*/
+  .articles__small--des,
+.articles-secondary__item--des {
+    display: none;
+  }
+
+  /*===================================================================*/
+  .articles-secondary {
+    display: block;
+  }
+
+  /*===================================================================*/
+  .cate-top__text {
+    padding: 1.875rem 0.9375rem 4.0625rem 0.9375rem;
+  }
+
+  .articles-primary {
+    padding: 1.25rem 0.9375rem 0;
+    border-bottom: none;
+  }
+
+  .articles__large--heading {
+    font-size: 1.25rem;
+    line-height: 26px;
+  }
+
+  .articles__small {
+    border-left: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #d2d2d2;
+    display: flex;
+  }
+
+  .articles__small--img {
+    flex-shrink: 0;
+    width: 35%;
+  }
+
+  .articles__small--content {
+    width: 65%;
+    flex: 1;
+    padding-left: 0.65rem;
+  }
+
+  .articles__small--heading,
+.articles-secondary__item--heading {
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .articles__large--content {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #d2d2d2;
+  }
+
+  .articles-secondary {
+    padding: 0.75rem 0.9375rem;
+  }
+
+  .articles-secondary__item--content {
+    padding-left: 0.65rem;
+  }
+
+  .articles-secondary__item {
+    padding: 0.75rem 0;
+  }
+
+  .articles-secondary__right {
+    padding: 1.25rem 0;
+  }
+
+  /*===================================================================about===================*/
+}
+@media (max-width: 46.1875em) {
+  .navbar-arrow {
+    display: flex;
   }
 }
 
