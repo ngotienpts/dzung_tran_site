@@ -91,6 +91,9 @@ body.hide {
   flex-wrap: wrap;
   overflow: hidden;
 }
+.leader-container .leader-item + .leader-item {
+  margin-left: 3.75rem;
+}
 .hexagon {
   -moz-transform: rotate(120deg);
   -ms-transform: rotate(120deg);

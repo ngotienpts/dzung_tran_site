@@ -32,3 +32,19 @@
 .about-content:not(.open){
     display: none;
 }
+.about-company{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   align-items: center;
+}
+.about-company__link{
+    margin: auto;
+    margin-bottom: 3.75rem;
+}
+.about-company__img {
+    width: 10rem;
+    height: auto;
+}
+.about-left__title {
+    color: #1F2124;
+}

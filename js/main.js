@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if(aboutIcons){
         aboutIcons.forEach(function(index){
           index.onclick = function(){
-            index.parentElement.parentElement.lastElementChild.classList.toggle('open')
+            index.parentElement.parentElement.lastElementChild.classList.toggle('open');
             if(index.parentElement.parentElement.lastElementChild.matches('.open')){
               if(index.firstElementChild.getAttribute('class') == 'fas fa-plus'){
                 index.firstElementChild.setAttribute('class','fas fa-minus')
