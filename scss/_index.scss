@@ -366,12 +366,15 @@ body.hide {
 }
 .footer-mb__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.875rem;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1.875rem 0;
   margin: 1.875rem 0;
 }
 .footer-mb__item:nth-child(even){
-  padding-left: 3rem;
+  // padding-left: 3rem;
+}
+.leader-item {
+  text-align: center;
 }
 .footer-mb__text {
   margin-bottom: 0.65rem;
