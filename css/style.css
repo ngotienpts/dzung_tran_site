@@ -997,11 +997,11 @@ button:hover::before {
   z-index: 100;
   width: 100%;
   display: block;
-  transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 1s ease;
+  -webkit-transition: top 1s ease;
+  -moz-transition: top 1s ease;
+  -ms-transition: top 1s ease;
+  -o-transition: top 1s ease;
 }
 
 .header {
